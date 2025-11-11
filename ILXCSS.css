@@ -1,0 +1,6 @@
+textarea {
+ resize: both !important;
+ width: 75% !important;
+ max-width: none !important;
+ overflow: auto !important;
+ }
