@@ -1,0 +1,594 @@
+/*
+ * Dark Mode Override
+ * Add [data-theme="dark"] to <body> or <html> to activate,
+ * or wrap in a @media (prefers-color-scheme: dark) block if you want OS-level detection.
+ *
+ * Key color mappings:
+ *   #fefefe  (white)       → #1e1e1e
+ *   #eef6fb  (light blue)  → #1a2733
+ *   #f0f0f0  (light gray)  → #2a2a2a
+ *   #d8ecf8  (pale blue)   → #1e3447
+ *   #262626  (near black)  → #e0e0e0
+ *   #004c8f  (primary blue)→ #4da6ff
+ *   #7d7d7d  (mid gray)    → #9e9e9e
+ *   #dedede  (border gray) → #3a3a3a
+ *   #8d1624  (error red)   → #ff6b7a
+ *   #1f5c39  (success grn) → #4caf7d
+ *   #754e0b  (warning amb) → #ffb74d
+ */
+
+[data-theme="dark"] {
+
+  /* ── Base page ─────────────────────────────────────────────── */
+  body, #page-content {
+    background: #121212 !important;
+  }
+
+  #page-content {
+    background: #1e1e1e !important;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  /* ── Typography / text colors ──────────────────────────────── */
+  h1, h2, h3, h4, h5, h6,
+  .body1, .body2, .body3, .text,
+  .caption, .overline, .label,
+  .paragraphSubtitle, .paragraphSubtitle2,
+  .buttonLarge, .buttonMedium, .buttonSmall,
+  .placeholder, .helperText, .avatarLetter, .tooltip {
+    color: #e0e0e0 !important;
+  }
+
+  /* ── Navigation / tab menu ─────────────────────────────────── */
+  .tab-menu {
+    background: #1e1e1e !important;
+    border-color: #3a3a3a !important;
+  }
+
+  .tab-menu,
+  .tab-menu a {
+    color: #e0e0e0 !important;
+  }
+
+  .tab-menu .menu-bar .collapsible-panel-header,
+  .tab-menu .menu-bar .link-items a {
+    background: #1e1e1e !important;
+    color: #e0e0e0 !important;
+  }
+
+  .tab-menu .menu-bar #searchBox {
+    background: #1e1e1e !important;
+    color: #e0e0e0 !important;
+  }
+
+  .tab-menu .menu-bar #searchMenu {
+    background: #1e1e1e !important;
+    border-color: #3a3a3a !important;
+  }
+
+  .menu-config::before {
+    color: #e0e0e0 !important;
+  }
+
+  /* ── Top navigation bar ────────────────────────────────────── */
+  #menubar, #dropdown-bar,
+  .nav-bar__items-container,
+  .logo-container,
+  #connect-bar,
+  #header {
+    background: #1e1e1e !important;
+    border-color: #3a3a3a !important;
+  }
+
+  #menuItems ul li a,
+  .connect-bar-link,
+  #userProfilelink {
+    color: #4da6ff !important;
+  }
+
+  /* ── Inventory / grid area ─────────────────────────────────── */
+  .inventory-row tr.data_row {
+    background-color: #252525 !important;
+  }
+
+  .inventory-row tr.data_row.alternate {
+    background-color: #1e1e1e !important;
+  }
+
+  .inventory-row td.data-cell,
+  .map-wrapper td.data-cell,
+  .detpage .inventory-row td.data-cell {
+    color: #e0e0e0 !important;
+    border-color: #3a3a3a !important;
+  }
+
+  .inventory-row td.data-cell a,
+  .map-wrapper td.data-cell a {
+    color: #4da6ff !important;
+  }
+
+  .inventory-row div.body-wrapper tr.header,
+  .inventory-row div.body-wrapper tr.header-filter {
+    background-color: #2a2a2a !important;
+  }
+
+  div.inventory-row.datagrid div.footer-wrapper tr.datagrid_footer td {
+    background: #2a2a2a !important;
+    color: #c0c0c0 !important;
+  }
+
+  .body-wrapper .float-table {
+    background: #1e1e1e !important;
+  }
+
+  .data_row:hover, .data_row_hover {
+    background-color: #2e2e2e !important;
+    border-color: #2e2e2e !important;
+  }
+
+  /* ── Detail page ───────────────────────────────────────────── */
+  .detpage {
+    color: #e0e0e0 !important;
+  }
+
+  .detpage .header .main,
+  .detpage .form-wrapper {
+    background: #1e1e1e !important;
+  }
+
+  .detpage .header .main .title-container .text {
+    color: #e0e0e0 !important;
+  }
+
+  .detpage .menu-top-container {
+    border-color: #3a3a3a !important;
+    background: #1e1e1e !important;
+  }
+
+  .detpage .menu-top-container .main {
+    background: #1e1e1e !important;
+  }
+
+  /* ── Sections (secbase) ────────────────────────────────────── */
+  .secbase.secbase-raven {
+    background: #1e1e1e !important;
+    border-color: #3a3a3a !important;
+  }
+
+  .secbase > .content {
+    background-color: #1e1e1e !important;
+  }
+
+  /* ── Form fields ───────────────────────────────────────────── */
+  .fieldarea-field input[type=text],
+  .fieldarea-field input[type=password],
+  .fieldarea-field textarea,
+  .fieldarea-field select,
+  .fieldarea-field select[multiple] {
+    background: #2a2a2a !important;
+    color: #e0e0e0 !important;
+    border-color: #555 !important;
+  }
+
+  .fieldarea-caption .caption-wrapper {
+    color: #c0c0c0 !important;
+  }
+
+  /* ── Buttons (primary blue) ────────────────────────────────── */
+  .gridCreateLink,
+  a.gridCreateLink,
+  a.createNewTaskLink,
+  a.systemLink.gridLinkBuilder,
+  .detpage .menu-action-links .addEntryLink,
+  .filter-container .footer > div:nth-child(1) {
+    background-color: #1a5fa3 !important;
+    border-color: #1a5fa3 !important;
+    color: #ffffff !important;
+  }
+
+  /* Outlined buttons */
+  .grid-action-links a,
+  .auditActionLink,
+  #save_add_new_action_link,
+  a.externalLink,
+  #DocHelp,
+  #save_action_link,
+  #save_exit_action_link {
+    border-color: #4da6ff !important;
+    color: #4da6ff !important;
+    background: transparent !important;
+  }
+
+  /* Delete / destructive */
+  .gridDeleteLink,
+  a.deleteLink,
+  .detpage .menu-action-links .deleteLink {
+    border-color: #ff6b7a !important;
+    color: #ff6b7a !important;
+  }
+
+  /* ── Tabs (app-tabs) ───────────────────────────────────────── */
+  .app-tabs,
+  .app-tabs ul {
+    background: #1a2733 !important;
+  }
+
+  .app-tabs ul li a {
+    color: #c0c0c0 !important;
+  }
+
+  .app-tabs ul li.selected-tab {
+    background: #1a2733 !important;
+    border-bottom-color: #4da6ff !important;
+  }
+
+  .app-tabs ul li.selected-tab a {
+    color: #4da6ff !important;
+  }
+
+  /* ── Tab strip (ui-tabs) ───────────────────────────────────── */
+  .tabs-panel.ui-tabs .ui-tabs-nav,
+  .tabs-section.ui-tabs .ui-tabs-nav,
+  #upload_tabs.ui-tabs .ui-tabs-nav,
+  .k-tabstrip-items.k-reset {
+    background: #1a2733 !important;
+  }
+
+  .tabs-panel.ui-tabs .ui-tabs-nav li[aria-selected=true],
+  .tabs-section.ui-state-active,
+  li.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active {
+    border-bottom-color: #4da6ff !important;
+  }
+
+  /* ── Dialogs ───────────────────────────────────────────────── */
+  .ui-dialog {
+    background: #1e1e1e !important;
+  }
+
+  .ui-dialog .ui-dialog-titlebar {
+    background: none !important;
+    color: #e0e0e0 !important;
+  }
+
+  .ui-widget-content,
+  .default.ui-widget-content {
+    background: #1e1e1e !important;
+    color: #e0e0e0 !important;
+  }
+
+  [data-theme="dark"] .ui-dialog .ui-dialog-buttonpane button {
+    background-color: #1a5fa3 !important;
+  }
+
+  button#dialog_close,
+  button#dialog_cancel {
+    border-color: #4da6ff !important;
+    color: #4da6ff !important;
+    background-color: #1e1e1e !important;
+  }
+
+  /* ── Notifications / alerts ────────────────────────────────── */
+  .message {
+    background-color: #1a2733 !important;
+    color: #4da6ff !important;
+  }
+
+  .ui-state-warning {
+    background: #2a2000 !important;
+    border-color: #ffb74d !important;
+    color: #ffb74d !important;
+  }
+
+  .ui-state-error {
+    background-color: #2a0a0e !important;
+    color: #ff6b7a !important;
+  }
+
+  .grid-notification-wrapper.grid-notification-wrapper-raven,
+  .grid_container .grid-notification-wrapper {
+    background-color: #1a2733 !important;
+    border-color: #4da6ff !important;
+  }
+
+  /* ── Status badges ─────────────────────────────────────────── */
+  .greenDiv {
+    background-color: #0d2b1a !important;
+    border-color: #4caf7d !important;
+    color: #4caf7d !important;
+  }
+
+  .redDiv {
+    background-color: #2a0a0e !important;
+    border-color: #ff6b7a !important;
+    color: #ff6b7a !important;
+  }
+
+  .yellowDiv, .orangeDiv {
+    background-color: #2a1a00 !important;
+    border-color: #ffb74d !important;
+    color: #ffb74d !important;
+  }
+
+  /* ── Filter / collapsible panels ───────────────────────────── */
+  .filter-container {
+    background-color: #2a2a2a !important;
+    border-color: #3a3a3a !important;
+  }
+
+  .filter-container .header .name input {
+    background-color: #1e1e1e !important;
+    border-color: #555 !important;
+    color: #e0e0e0 !important;
+  }
+
+  .chromed-collapsiblepanel.ui-widget-content {
+    background: #1e1e1e !important;
+    border-color: #3a3a3a !important;
+  }
+
+  .chromed-collapsiblepanel.custom-inventories .ui-widget-header,
+  .chromed-collapsiblepanel.views .ui-widget-header,
+  .chromed-collapsiblepanel.filters .ui-widget-header {
+    background: #1a2733 !important;
+    color: #e0e0e0 !important;
+  }
+
+  .chromed-collapsiblepanel.custom-inventories select,
+  .chromed-collapsiblepanel.views select,
+  .chromed-collapsiblepanel.filters select {
+    background-color: #2a2a2a !important;
+    color: #e0e0e0 !important;
+    border-color: #555 !important;
+  }
+
+  /* ── Breadcrumbs ───────────────────────────────────────────── */
+  .detpage .breadcrumbs,
+  .inventory-page .breadcrumbs {
+    color: #9e9e9e !important;
+  }
+
+  .detpage .breadcrumbs a,
+  .inventory-page .breadcrumbs a {
+    color: #4da6ff !important;
+    border-bottom-color: #4da6ff !important;
+  }
+
+  /* ── Hierarchy tree ────────────────────────────────────────── */
+  .hierarchy-wrapper,
+  .hierarchy-tree {
+    background-color: #1a2733 !important;
+  }
+
+  /* ── Progress bars ─────────────────────────────────────────── */
+  .ui-progressbar {
+    background-color: #2a2a2a !important;
+    border-color: #4da6ff !important;
+  }
+
+  .ui-progressbar .ui-progressbar-value {
+    background-color: #4da6ff !important;
+  }
+
+  /* ── Date picker ───────────────────────────────────────────── */
+  .ui-datepicker,
+  .ui-datepicker table {
+    background: #1e1e1e !important;
+  }
+
+  .ui-datepicker .ui-datepicker-header {
+    background: #1a2733 !important;
+    color: #e0e0e0 !important;
+  }
+
+  .ui-datepicker-calendar .ui-state-default {
+    color: #e0e0e0 !important;
+  }
+
+  .ui-datepicker-calendar .ui-state-default:hover {
+    background: #2e3d4f !important;
+    color: #4da6ff !important;
+  }
+
+  .ui-datepicker-calendar .ui-state-default.ui-state-active {
+    background-color: #1a5fa3 !important;
+    color: #ffffff !important;
+  }
+
+  .ui-datepicker th {
+    color: #9e9e9e !important;
+  }
+
+  /* ── Select2 dropdowns ─────────────────────────────────────── */
+  .select2-container--default .select2-selection--single {
+    background: #2a2a2a !important;
+    border-color: #555 !important;
+    color: #e0e0e0 !important;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #e0e0e0 !important;
+  }
+
+  .select2-dropdown {
+    background: #2a2a2a !important;
+    border-color: #555 !important;
+  }
+
+  .select2-container--default .select2-results__option {
+    color: #e0e0e0 !important;
+  }
+
+  .select2-container--default .select2-results__option--highlighted {
+    background-color: #1a5fa3 !important;
+  }
+
+  /* ── Upload area ───────────────────────────────────────────── */
+  .frameUpload {
+    border-color: #555 !important;
+    background-color: #1a2733 !important;
+  }
+
+  /* ── User profile dropdown ─────────────────────────────────── */
+  div.user-profile-dropdown,
+  .userdropdown-content {
+    background-color: #1e1e1e !important;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  div.user-profile-dropdown ul li a,
+  .userdropdown-content .user-item-menu {
+    color: #e0e0e0 !important;
+  }
+
+  div.user-profile-dropdown ul li:hover,
+  .userdropdown-content .user-item-menu:hover {
+    background-color: #2a2a2a !important;
+  }
+
+  /* ── Location / application dropdowns ─────────────────────── */
+  #location-dropdown,
+  #businessHierarchy-dropdown {
+    border-color: #4da6ff !important;
+    background: #1e1e1e !important;
+  }
+
+  #location-dropdown select,
+  #businessHierarchy-dropdown select {
+    color: #4da6ff !important;
+    background-color: #1e1e1e !important;
+  }
+
+  #application-dropdown {
+    background-color: #1e1e1e !important;
+    border-color: #4da6ff !important;
+  }
+
+  #application-dropdown .appdropdown-title span {
+    color: #4da6ff !important;
+  }
+
+  #application-dropdown .appdropdown-dropdown {
+    background: #1e1e1e !important;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  #application-dropdown .appdropdown-dropdown .appdropdown-list-item {
+    color: #e0e0e0 !important;
+  }
+
+  #application-dropdown .appdropdown-dropdown .appdropdown-list-item.selected {
+    background: #1a2733 !important;
+  }
+
+  /* ── Search ────────────────────────────────────────────────── */
+  .search-container {
+    background-color: #1e1e1e !important;
+    border-color: #4da6ff !important;
+  }
+
+  .search-menu .search-container input {
+    background-color: #1e1e1e !important;
+    color: #e0e0e0 !important;
+  }
+
+  .search-menu .search-container input::placeholder {
+    color: #9e9e9e !important;
+  }
+
+  /* ── More/overflow menus ───────────────────────────────────── */
+  ul.gear-dropdown-list,
+  #toolbaroptions,
+  .app-tabs .extra-tabs,
+  .inventory-page .page-header.header-links .items,
+  .detpage .page-header.header-links .items,
+  .inventory-actions .items ul,
+  .locations,
+  .businessHierarchy {
+    background: #1e1e1e !important;
+    border-color: #3a3a3a !important;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  ul.gear-dropdown-list li a,
+  #toolbaroptions ul li,
+  .app-tabs .extra-tabs li a,
+  .inventory-actions .items ul li a {
+    color: #e0e0e0 !important;
+  }
+
+  ul.gear-dropdown-list li:hover,
+  #toolbaroptions ul li:hover,
+  .app-tabs .extra-tabs li:hover,
+  .inventory-page .page-header.header-links .items ul li:hover {
+    background: #2a2a2a !important;
+  }
+
+  /* ── Workflow diagram ──────────────────────────────────────── */
+  .content .wfDiagram > div.before-blue > div,
+  .content .wfDiagram > div.current-green > div {
+    color: #c0c0c0 !important;
+  }
+
+  .content .wfDiagram > div.after-blue > div,
+  .content .wfDiagram > div.after-red > div {
+    color: #666 !important;
+  }
+
+  /* ── Group header rows ─────────────────────────────────────── */
+  .group-header {
+    background-color: #1e3447 !important;
+  }
+
+  .group-header td {
+    color: #c0c0c0 !important;
+    border-color: #3a3a3a !important;
+  }
+
+  /* ── Column / view config panels ──────────────────────────── */
+  .column-wrapper {
+    background: #2a2a2a !important;
+    border-color: #3a3a3a !important;
+  }
+
+  .column-wrapper .main {
+    background: #2a2a2a !important;
+  }
+
+  .column-wrapper .main .caption {
+    color: #e0e0e0 !important;
+  }
+
+  /* ── Tab content containers ────────────────────────────────── */
+  div.tab-content {
+    background: #1e1e1e !important;
+  }
+
+  /* ── Inline edit highlight ─────────────────────────────────── */
+  .inline-edit,
+  .popup-edit {
+    background-color: #1a2e40 !important;
+    border-color: #4da6ff !important;
+  }
+
+  /* ── Log inventory ─────────────────────────────────────────── */
+  .log-inventory .table-wrapper .styled-table thead {
+    background-color: #2a2a2a !important;
+  }
+
+  .log-inventory .table-wrapper .styled-table thead th {
+    color: #e0e0e0 !important;
+  }
+
+  .log-inventory .table-wrapper .styled-table tbody tr {
+    background-color: #252525 !important;
+  }
+
+  .log-inventory .table-wrapper .styled-table tbody tr:nth-child(even) {
+    background-color: #1e1e1e !important;
+  }
+
+  .log-inventory .pagination-wrapper .pagination-footer {
+    background: #2a2a2a !important;
+    color: #9e9e9e !important;
+  }
+}
